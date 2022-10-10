@@ -1,26 +1,31 @@
--- Create table department
-DROP DATABASE IF EXISTS employee_db;
+DROP DATABASE IF EXISTS employees_db;
 
-CREATE DATABASE employee_db;
+CREATE DATABASE employees_db;
 
--- Use employee_db --
-USE employee_db;
+USE employees_db;
 
--- Create table department
-CREATE TABLE dapartment (
-    -- Create unique id for each item
-    id INT NOT NULL AUTO_INCREMENTT,
-    dept_name VARCHAR(30) NOT NULL,
+-- Create the table for department
+CREATE TABLE department (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
 );
 
--- Create table roles
+-- Create the table for roles
 CREATE TABLE roles (
-    title VARCHAR(30) salary DECIMAL department_id INT PRIMARY KEY (id)
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(30) NOT NULL,
+    salary DECIMAL NOT NULL,
+    department_id INT NOT NULL,
+    PRIMARY KEY (id)
 );
 
--- Create table employee
+-- Create the table for employees
 CREATE TABLE employee (
-    id INT NOT NULL AUTO_INCREMENTT,
-    first_name VARCHAR(30) last_name VARCHAR(30) role_id INT manager_id INT PRIMARY KEY (id)
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    role_id INT NOT NULL,
+    manager_id INT NULL,
+    PRIMARY KEY (id)
 );
