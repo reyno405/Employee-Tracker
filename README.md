@@ -2,6 +2,10 @@
 
 A CLI content management system for managing a company's employees using node, inquirer, and MySQL.
 
+# Video
+
+https://drive.google.com/file/d/1Kay0Z4r7R5WTB2Ub5PUz36qmL4021r7w/view
+
 # User Story
 
 As a business owner
